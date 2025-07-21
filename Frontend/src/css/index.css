@@ -1,0 +1,37 @@
+body nav{
+background-color: orange;
+ }
+
+.staffSec{
+    height: 90vh;
+    background-color: peru;
+    color: white;
+    width: 100%    ;
+}
+ 
+
+
+.attendSec{
+    height: 90vh;
+    background-color: red;
+    color: white;
+    width: 100% ;
+}
+
+
+.listSec{
+    height: 90vh;
+    background-color: gold;
+    width: 100%    ;
+}
+
+.displayListSec{
+     background-color: chartreuse;
+    height: 90vh;
+    color: white;
+    width: 100% ;
+
+}
+
+
+ 
