@@ -4,7 +4,7 @@ background-color: orange;
 
 .staffSec{
     height: 90vh;
-    background-color: peru;
+    background-color: black;
     color: white;
     width: 100%    ;
 }
@@ -13,7 +13,7 @@ background-color: orange;
 
 .attendSec{
     height: 90vh;
-    background-color: red;
+    background-color: black;
     color: white;
     width: 100% ;
 }
@@ -21,12 +21,12 @@ background-color: orange;
 
 .listSec{
     height: 90vh;
-    background-color: gold;
+    background-color: black;
     width: 100%    ;
 }
 
 .displayListSec{
-     background-color: chartreuse;
+     background-color: black;
     height: 90vh;
     color: white;
     width: 100% ;
