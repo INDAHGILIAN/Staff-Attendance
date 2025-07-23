@@ -5,33 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Staff</title>
     <link rel="stylesheet" href="../vendor/bootstrap.bundle.min.css">
+    <link rel="stylesheet" href="../css/register_staff.css">
  </head>
  <body>
-    <h1>staff registratin form</h1>
-    <form action="/" method="get">
-    <label for="first name">First name:</label>
-    <input type="text" id="first name">
-    <label for="Last name">Last name:</label>
-    <input type="text" id="Lastname">
-    <label for="dod">Date of birth:</label>
-    <input type="date"id="dod">
-    <label for="pob">place of birth:</label>
-    <input type="text"id="place of b irth">
-    <label for="Gender">Gender</label>
-    <input type="radio" id="Female" name="gender" value="Female">
-    <label for="Female">Female</label>
-    <input type="radio" id="Male" name="gender" value="Male">
-    <label for="Male">Male</label>
-    <label for="Department">Department</label>
-    <input type="text"id="departmnt">
-    <label for="Status">Status</label>
-    <select name="status" id="status">
-    <option value="perminent">perminent</option>
-    <option value="Temporal">Temporal</option>
-    <option value="Internt">Internt</option>
-    </select><br>
-    <input type="submit"value="Register">
-    </form>
+   <div class="container-fluid">
+      <h1 style="margin-left: 30%;">staff registratin form</h1>
+         <form action="#" method="get">
+             <div class="row">
+               <div class="col">
+                  <label for="first name" class="form-lable">First name:</label>
+                  <input type="text" class="form-control" id="first name" placeholder="Enter first name">
+              </div>
+                <div class="col">
+                   <label for="last name" class="form-lable">Last name:</label>
+                  <input type="text" class="form-control" id="last name" placeholder="Enter last name">
+              </div>
     
+             </div>
+       <div class="row">
+             <div class="col">
+                 <label for="date of birth" class="form-label">Date of birth:</label>
+                  <input type="date" class="form-control" id="date of birth" placeholder="Enter date of birth">
+             </div>
+               <div class="col">
+                  <label for="Place of birth" class="form-lable">place of birth:</label>
+                   <input type="text" class="form-control" id="Place of birth" placeholder="Enter place of birth">
+        </div>
+           <div class="row">
+                <div class="col">
+                  <label for="Gender" class="form-lable">Gender</label>
+                  <select class="form-select" id="gender">
+                    <option value="">select</option>
+                    <option value="male">male</option>
+                     <option value="female">female</option>
+                   </select>
+                </div>
+                <div class="col">
+                     <label for="Department" class="form-lable">Department</label>
+                     <input type="text" class="form-control" id="department" placeholder="Enter department">
+                </div>
+            </div>
+    
+      <div class="row">
+          <div class="col">
+               <label for="Status" class="form-label">Status</label>
+            <select class="form-select" id="Status">
+            <option value="perminent">perminent</option>
+            <option value="Temporal">Temporal</option>
+            <option value="Internt">Internt</option>
+            </select>   
+        </div>
+       <div class="col">
+         
+        </div>
+    </div>
+    
+    <button class="btn" type="submit">submit</button>
+      </form> 
+   </div>
  </body>
  </html>
