@@ -1,0 +1,11 @@
+.btn{
+    justify-items: right;
+    margin-top: 10px;
+    margin-left: 1080px;
+}
+.attendance h2{
+    align-items: center;
+    justify-items: center;
+    display : center;
+    text-align: center;
+}
