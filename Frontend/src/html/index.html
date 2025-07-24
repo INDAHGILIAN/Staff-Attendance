@@ -1,165 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Staff Attendance Recorder System</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../vendor/bootstrap.bundle.min.css">
+    <link rel="stylesheet" href="../css/register_staff.css">
+    <link rel="stylesheet" href="../css/register attendance.css">
+    <link rel="stylesheet" href="../css/workers_list.css">
+    <link rel="stylesheet" href="../css/attendance list.css">
 </head>
+
 <body>
-<!--Header-->  
+    <!--Header-->
     <header class="header d-flex justify-content-between align-items-center">
-    <div class="d-flex  align-items-center" style="background-color: rgba(35, 35, 109, 0.622); width:100%">
-    <img src="../../../image/logo.jpg" alt="logo" style="width: 60px; height:60px"><h1>Smart Tracker</h1>    
-</div>
-
-</header>
-        <div class="container-fluid">
-            <div class="row">
-            <!--sidebar-->
-            <nav class=" col-md-2 sidebar">
-                <div class="container-fluid">
-
-               
-            <h1 class="link">Menu</h1>
-            <a href="../html/Register_staff.html" id="Register-staff-link">register staff</a>
-            <a href="#" id="Register-attendance-link">register attendance</a>
-            <a href="#" id="Workers-list-link">workers list</a> 
-            <a href="#" id="Attendancelist-list-link">attendance list</a>
-             </div>
-            </nav>
-          <!--page center-->  
-
-          <main class="col-md-10 p-4" id="page-center">
-          </main>
-            </div>
+        <div class="d-flex  align-items-center" style="background-color: rgba(35, 35, 109, 0.937); width:100%">
+            <img src="../../../image/logo.jpg" alt="logo" style="width: 60px; height:60px">
+            <h1>Smart Tracker</h1>
         </div>
 
-        <!--Hidden Template-->
-        
-        <!--Staff Register Template-->
-        <template id="staff-registration-template">
-            <div class="container-fluid">
-                <h1>staff registratin form</h1>
-                   <form action="#" method="get">
-                       <div class="row">
-                         <div class="col">
-                            <label for="first name" class="form-lable">First name:</label>
-                            <input type="text" class="form-control" id="first name" placeholder="Enter first name">
-                        </div>
-                          <div class="col">
-                             <label for="last name" class="form-lable">Last name:</label>
-                            <input type="text" class="form-control" id="last name" placeholder="Enter last name">
-                        </div>
-              
-                       </div>
-                 <div class="row">
-                       <div class="col">
-                           <label for="date of birth" class="form-label">Date of birth:</label>
-                            <input type="date" class="form-control" id="date of birth" placeholder="Enter date of birth">
-                       </div>
-                         <div class="col">
-                            <label for="Place of birth" class="form-lable">place of birth:</label>
-                             <input type="text" class="form-control" id="Place of birth" placeholder="Enter place of birth">
-                  </div>
-                     <div class="row">
-                          <div class="col">
-                            <label for="Gender" class="form-lable">Gender</label>
-                            <select class="form-select" id="gender">
-                              <option value="">select</option>
-                              <option value="male">male</option>
-                               <option value="female">female</option>
-                             </select>
-                          </div>
-                          <div class="col">
-                               <label for="Department" class="form-lable">Department</label>
-                               <input type="text" class="form-control" id="department" placeholder="Enter department">
-                          </div>
-                      </div>
-              
-                <div class="row">
-                    <div class="col">
-                         <label for="Status" class="form-label">Status</label>
-                      <select class="form-select" id="Status">
-                      <option value="perminent">perminent</option>
-                      <option value="Temporal">Temporal</option>
-                      <option value="Internt">Internt</option>
-                      </select>   
-                  </div>
-                 <div class="col">
-                   
-                  </div>
-              </div>
-              
-              <button class="btn">submit</button>
-                </form> 
-             </div>
-        </template>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!--sidebar-->
+             <nav class=" col-md-2 sidebar">
+                <div class="container-fluid" id="main">
 
-        <!--Register Attendance Template-->
-        <template id="Register-Attendance-template">
-            <div class="container-fluid">
-                <h2>staff registratin form</h2>
+                                                                                                   
+                    <h1 class="link">Menu</h1>
+                    <button id="register_staff-link">register staff</button>
+                    <button id="register attendance.link">register attendance</button>
+                    <button id="workers_list.link">workerslist</button>
+                    <button id="attendance list.link">attendance list</button>
 
-            </template>
-          <!--Workers list Template-->
-            <template id="Workers-list-template">
-                <div class="container-fluid">
-                    <h3>staff registratin form</h3>   
-                    <form action="#" method="get">
-                        <div class="row">
-                            <div class="col">
-                                <label for="first name" class="form-lable">First name:</label>
-                                <input type="text" class="form-control" id="first name" placeholder="Enter first name">
-                            </div>
-                        <div class="col">
-                         <label for="last name" class="form-lable">Last name:</label>
-                         <input type="text" class="form-control" id="last name" placeholder="Enter last name">
-                         </div>
-                    </div>
-                     <div class="row">
-                      <div class="col">
-                        <label for="department" class="form-lable">Department</label>
-                        <input type="text" class="form-control" id="department" placeholder="Enter department">
-                        </div>
-                        <div class="col">
-                            <label for="Status" class="form-label">Status</label>
-                            <select class="form-select" id="Status">
-                            <option value="perminent">perminent</option>
-                            <option value="Temporal">Temporal</option>
-                            <option value="Internt">Internt</option>
-                            </select>
-                       </div>
-                    </div>
-                       <div class="row">
-                            <div class="col">
-                                <label for="Action" class="form-label">Action</label>
-                                <select class="form-select" id="Action">
-                                <option value="Enter">enter</option>
-                                <option value="Delete">delete</option>
-                                 </select>
-                           </div>
-                            <div class="col">
-                
-                         </div>
-                        </div>
-                 
-                        <button type="submit" class="btn btn-primary">submit</button>
-                    </form>
-                      <div>
-                </template>
+                    <!--page center-->
 
-                
-        <!--Attendance list Template-->
-        <template id="Attendance-list-template">
-            <div class="container-fluid">
-                <h4>staff registratin form</h4>
-                
-            </template>
+           
+           
+        </div>
+             </nav>
 
-        
- <div>
- </div>
+             <main class="col-md-10 p-4" id="page-center">
+                <div id="main">
+                    <div id="register_staff.html"></div>
+                    <div id="register attendance.html"></div>
+                    <div id="workers_list.html"></div>
+                    <div id="attendance list.html"></div> 
+                </div>
+            </main>
+      </div>
 </body>
+
+<script>
+     
+    document.addEventListener('DOMContentLoaded', function () {
+        const link = document.getElementById('register_staff-link');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pagecenter = document.getElementById('page-center');
+                pagecenter.innerHTML = 'hello';
+                console.log(pagecenter.innerHTML)
+                //pagecenter.appendChild(content.cloneNode(true));
+                fetch('register_staff.html')  // adjust path if needed
+                .then(response => response.text())
+                .then(data => {
+                    const pagecenter = document.getElementById('page-center');
+                    pagecenter.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading form:', error);
+                });
+        });
+        
+        }
+    });
+    
+</script>
 </html>

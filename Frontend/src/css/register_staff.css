@@ -1,0 +1,13 @@
+/*.body{
+    background-color: rgba(0, 0, 255, 0.456) ;
+    width: 30px;
+    height: 10px;
+    border-radius: 20px;IGD
+}*/
+
+.btn{
+    background-color:rgba(0, 0, 255, 0.384);
+    border-radius: 5px;
+    width: 10%;
+    margin-left: 70%;
+}
