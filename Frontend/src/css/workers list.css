@@ -9,13 +9,13 @@ body{
     margin-left: 30px;
 
 }
-.Attendance  table{
+.workers  table{
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     margin-top: 20px;
 }
-.Attendance td{
+.workers td{
     border: 1px solid #000;
     padding: 10px;
     text-align: center;
@@ -23,7 +23,7 @@ body{
 
 
 }
-.Attendance th{
+.workers th{
     background-color: #e0e0e0;
     font-weight: bold;
 }
