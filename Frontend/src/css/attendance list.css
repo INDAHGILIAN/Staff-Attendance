@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-.btn{
-    justify-items: right;
-    margin-top: 10px;
-    margin-left: 1080px;
-    background-color: rgba(0, 0, 255, 0.408);
-=======
+
 body{
     font-family: Arial,  sans-serif;
     padding: 40px;
     background-color: #f5f5f5;
      text-align: center;
->>>>>>> bc80912dd46f402087f352de9905b7862345eb42
+
 }
 .h2{
     text-align: center;

@@ -31,9 +31,9 @@
                                                                                                    
                     <h1 class="link">Menu</h1>
                     <button id="register_staff-link">register staff</button>
-                    <button id="register attendance.link">register attendance</button>
-                    <button id="workers_list.link">workerslist</button>
-                    <button id="attendance list.link">attendance list</button>
+                    <button id="registerattendance-link">register attendance</button>
+                    <button id="workers_list-link">workerslist</button>
+                    <button id="attendance-list-link">attendance list</button>
 
                     <!--page center-->
 
@@ -45,7 +45,7 @@
              <main class="col-md-10 p-4" id="page-center">
                 <div id="main">
                     <div id="register_staff.html"></div>
-                    <div id="register attendance.html"></div>
+                    <div id="registerattendance.html"></div>
                     <div id="workers_list.html"></div>
                     <div id="attendance list.html"></div> 
                 </div>
@@ -61,10 +61,10 @@
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const pagecenter = document.getElementById('page-center');
-                pagecenter.innerHTML = 'hello';
+
                 console.log(pagecenter.innerHTML)
                 //pagecenter.appendChild(content.cloneNode(true));
-                fetch('register_staff.html')  // adjust path if needed
+                fetch('Register_staff.html')  // adjust path if needed
                 .then(response => response.text())
                 .then(data => {
                     const pagecenter = document.getElementById('page-center');
@@ -77,6 +77,76 @@
         
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const link = document.getElementById('registerattendance-link');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pagecenter = document.getElementById('page-center');
+
+                console.log(pagecenter.innerHTML)
+                //pagecenter.appendChild(content.cloneNode(true));
+                fetch('registerattendance.html')  // adjust path if needed
+                .then(response => response.text())
+                .then(data => {
+                    const pagecenter = document.getElementById('page-center');
+                    pagecenter.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading form:', error);
+                });
+        });
+        
+        }
+    });
+
+
+ document.addEventListener('DOMContentLoaded', function () {
+        const link = document.getElementById('workers_list-link');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pagecenter = document.getElementById('page-center');
+
+                console.log(pagecenter.innerHTML)
+                //pagecenter.appendChild(content.cloneNode(true));
+                fetch('workers_list.html')  // adjust path if needed
+                .then(response => response.text())
+                .then(data => {
+                    const pagecenter = document.getElementById('page-center');
+                    pagecenter.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading form:', error);
+                });
+        });
+        
+        }
+    });
+
     
+ document.addEventListener('DOMContentLoaded', function () {
+        const link = document.getElementById('attendance-list-link');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pagecenter = document.getElementById('page-center');
+
+                console.log(pagecenter.innerHTML)
+                //pagecenter.appendChild(content.cloneNode(true));
+                fetch('attendancelist.html')  // adjust path if needed
+                .then(response => response.text())
+                .then(data => {
+                    const pagecenter = document.getElementById('page-center');
+                    pagecenter.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading form:', error);
+                });
+        });
+        
+        }
+    });
 </script>
 </html>
