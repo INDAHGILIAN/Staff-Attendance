@@ -1,11 +1,15 @@
-.btn{
-    justify-items: right;
-    margin-top: 8px;
-    margin-left: 710px;
-    background-color:rgba(0, 0, 255, 0.408)
+body{
+    font-family: Arial, sans-serif;
 }
-.attendance h2{
-    align-items: center;
-    justify-items: center;
-    text-align: center;
+
+.btn{
+    background-color: #084298;
+    border-radius: 5px;
+    width: 10%;
+    margin-left: 70%;
+    margin-top: 50px;
+}
+
+.attendance-form h2{
+    margin-left: 40%;
 }

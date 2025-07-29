@@ -6,11 +6,43 @@
     <title>workers list</title>
     <link rel="stylesheet" href="../vendor/boostrap.bundle.min.css">
     <link rel="stylesheet" href="../css/register_staff.css">
+
+    <style>
+
+      body {
+            font-family: sans-serif;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("/Frontend/Assets/Image/1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.9;
+        }
+        
+        
+    
+
+    </style>
 </head>
 
+
+
    <div class="container-fluid">
-      <h1 style="margin-left: 30%;">staff registratin form</h1>
+      <h1 style="margin-left: 30%; color:black;">Staff Registration Form</h1>
          <form action="#" method="get">
+          <div class="container-fluid">
              <div class="row">
                <div class="col">
                   <label for="first name" class="form-lable">First name:</label>
@@ -27,22 +59,37 @@
                  <label for="date of birth" class="form-label">Date of birth:</label>
                   <input type="date" class="form-control" id="date of birth" placeholder="Enter date of birth">
              </div>
-               <div class="col">
-                  <label for="Place of birth" class="form-lable">place of birth:</label>
-                   <input type="text" class="form-control" id="Place of birth" placeholder="Enter place of birth">
-        </div>
-           <div class="row">
+              
                 <div class="col">
-                  <label for="Gender" class="form-lable">Gender</label>
+                  <label for="gender" class="form-lable">Gender</label>
                   <select class="form-select" id="gender">
                     <option value="">select</option>
                     <option value="male">male</option>
                      <option value="female">female</option>
                    </select>
                 </div>
+              </div> 
+                 <div class="row">
                 <div class="col">
-                     <label for="Department" class="form-lable">Department</label>
-                     <input type="text" class="form-control" id="department" placeholder="Enter department">
+                     <label for="date" class="form-lable">Date</label>
+                    <input class="form-control" type="date" id="date" name="date" placeholder="date">
+              </div>
+
+            <div class="col">
+                <label for="department" class="form label">Department</label>
+                <select id="department" name="department" class="form-select" >
+                    <option value="">select department</option>
+                    <option value="pdl">PDL</option>
+                    <option value="type setting">Type Setting</option>
+                    <option value="screen printing">Screen Printing</option>
+                    <option value="finishing">Finishing</option>
+                    <option value="mounting">Mounting</option>
+                    <option value="accounting">Accounting</option>
+                    <option value="canteen">Caanteen</option>
+                    <option value="fabric printing">Fabric Printing</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="marketing">Marketing</option>
+                </select>
                 </div>
             </div>
     
@@ -60,8 +107,10 @@
         </div>
     </div>
     
-    <button class="btn" type="submit">submit</button>
+    <button class="btn btn-primary" type="submit">submit</button>
+    </div>
       </form> 
    </div>
+
  <body>
   <html>
