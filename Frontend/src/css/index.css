@@ -1,30 +1,93 @@
 .sidebar{
-    background-color: rgba(255, 166, 0, 0.849);
+    background-color:orange;
     height: 90vh;
-    padding-right:90px;
-}
-    
-.sidebar a{
-    display: block;
-    margin-bottom: 20px;
+    /* padding-right:90px; */
+
 }
 
- .row nav{
+#register_staff-link:hover{
+    background-color: rgb(213, 143, 13);
+}
+
+#registerattendance-link:hover{
+    background-color: rgb(213, 143, 13);
+    
+}
+
+#workers_list-link:hover{
+     background-color: rgb(213, 143, 13);
+}
+
+#attendance-list-link:hover{
+     background-color: rgb(213, 143, 13);
+}
+    
+/* .sidebar a{
+    display: block;
+    margin-bottom: 20px;
+} */
+
+ /* .row nav{
 margin-left: 0px;
- }
+ } */
 
  .d-flex h1 {
     margin-left: 40%;
  }
 
-                   
-.link button{
-    width:300%;
+#attendance-list-link{
+   
+ width:100%;
     margin-top: 30px;
+    color: black;
+    background-color: orange;
+    margin: 10px;
+}                  
+
+#register_staff-link{
+   
+ width:100%;
+    margin-top: 30px;
+    color: black;
+    background-color: orange;
+    margin: 10px;
+}             
+
+#registerattendance-link{
+   
+ width:100%;
+    margin-top: 30px;
+    color: black;
+    background-color: orange;
+    margin: 10px;
+}             
+
+#workers_list-link{
+   
+ width:100%;
+    margin-top: 30px;
+    color: black;
+    background-color: orange;
+    margin: 10px;
+    
+}             
+
+#page-center {
+    /* background-image: url(../../Assets/Image/2.jpeg); */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 100vw;
+    object-fit: cover; */
 }
 
+<<<<<<< HEAD
 .body{
     
     
 }
     
+=======
+
+
+>>>>>>> dcd1e2e269a39ebf11fa8e3a708877f2a2d7c594

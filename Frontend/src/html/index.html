@@ -8,19 +8,48 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../vendor/bootstrap.bundle.min.css">
 
+    <style>
+         body {
+            font-family: sans-serif;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("/Frontend/Assets/Image/1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.9;
+        }
+        
+        
+
+    </style>
+    
+
 </head>
 
 <body>
     
     <header class="header d-flex justify-content-between align-items-center">
-        <div class="d-flex  align-items-center" style="background-color: rgba(35, 35, 109, 0.937); width:100%">
-            <img src="../../../image/logo.jpg" alt="logo" style="width: 60px; height:60px">
-            <h1>Smart Tracker</h1>
+        <div class="d-flex  align-items-center" style="background-color: #084298; width:100%">
+            <img src="../../Assets/logo.jpg/logo.jpg" alt="logo" style="width: 80px; height:70px">
+            <h1 style="color: black;">Smart Tracker</h1>
         </div>
 
     </header>
     <div class="container-fluid">
         <div class="row">
+<<<<<<< HEAD
             
              <nav class=" col-md-2 sidebar">
                 <div class="container-fluid" id="main">
@@ -35,18 +64,116 @@
                     
 
            
-           
-        </div>
-             </nav>
+=======
+            <!--sidebar-->
+            <nav class="sidebar col-md-2 ">
+        
+                <div class="container" id="main">
 
-             <main class="col-md-10 p-4" id="page-center">
+                                                                                                   
+                    <h1 class="link" style="color: black;">Menu</h1>
+                    <button id="register_staff-link">Register Staff</button>
+                    <button id="registerattendance-link">Register Attendance</button>
+                    <button id="workers_list-link">Workers list</button>
+                    <button id="attendance-list-link">Attendance list</button>          
+>>>>>>> dcd1e2e269a39ebf11fa8e3a708877f2a2d7c594
+           
+                </div>
+            </nav>
+             <!--page center-->
+
+            <main class="col-md-10 p-4" id="page-center">
+                <div class="defualt">
+                    
+   <div class="container-fluid">
+      <h1 style="margin-left: 30%; color: black">Staff Registration Form</h1>
+         <form action="#" method="get">
+          <div class="container-fluid">
+             <div class="row">
+               <div class="col">
+                  <label for="first name" class="form-lable">First name:</label>
+                  <input type="text" class="form-control" id="first name" placeholder="Enter first name">
+              </div>
+                <div class="col">
+                   <label for="last name" class="form-lable">Last name:</label>
+                  <input type="text" class="form-control" id="last name" placeholder="Enter last name">
+              </div>
+    
+             </div>
+       <div class="row">
+             <div class="col">
+                 <label for="date of birth" class="form-label">Date of birth:</label>
+                  <input type="date" class="form-control" id="date of birth" placeholder="Enter date of birth">
+             </div>
+              
+                <div class="col">
+                  <label for="gender" class="form-lable">Gender</label>
+                  <select class="form-select" id="gender">
+                    <option value="">select</option>
+                    <option value="male">male</option>
+                     <option value="female">female</option>
+                   </select>
+                </div>
+              </div> 
+                 <div class="row">
+                <div class="col">
+                     <label for="date" class="form-lable">Date</label>
+                    <input class="form-control" type="date" id="date" name="date" placeholder="date">
+              </div>
+
+            <div class="col">
+                <label for="department" class="form label">Department</label>
+                <select id="department" name="department" class="form-select" >
+                    <option value="">select department</option>
+                    <option value="pdl">PDL</option>
+                    <option value="type setting">Type Setting</option>
+                    <option value="screen printing">Screen Printing</option>
+                    <option value="finishing">Finishing</option>
+                    <option value="mounting">Mounting</option>
+                    <option value="accounting">Accounting</option>
+                    <option value="canteen">Caanteen</option>
+                    <option value="fabric printing">Fabric Printing</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+                </div>
+            </div>
+    
+      <div class="row">
+          <div class="col">
+               <label for="Status" class="form-label">Status</label>
+            <select class="form-select" id="Status">
+            <option value="perminent">perminent</option>
+            <option value="Temporal">Temporal</option>
+            <option value="Internt">Internt</option>
+            </select>   
+        </div>
+       <div class="col">
+         
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">submit</button>
+    </div>
+      </form> 
+   </div>
+
+                </div>
+
+
+
+
+
+
                 <div id="main">
-                    <div id="register_staff.html"></div>
+                    <div id="register_staff.html" class="werey"></div>
                     <div id="registerattendance.html"></div>
                     <div id="workers_list.html"></div>
-                    <div id="attendance list.html"></div> 
+                    <div id="attendance list.html"></div>
+                
                 </div>
-            </main>
+               
+            <!-- </main> -->
       </div>
 </body>
 
@@ -146,4 +273,11 @@
         }
     });
 </script>
+
+<footer style="text-align: center; display: flex;  margin-left: 40%;" >
+    <p class="footer1">gilianshalom@gmail.com <p>
+        
+    </p>
+    <p class="footer2">2025 All rights reserved</p>
+        </footer>
 </html>

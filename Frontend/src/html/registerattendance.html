@@ -6,29 +6,45 @@
     <title>workers list</title>
     <link rel="stylesheet" href="../vendor/boostrap.bundle.min.css">
     <link rel="stylesheet" href="../css/register attendance.css">
+
+        <style>
+
+      body {
+            font-family: sans-serif;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("/Frontend/Assets/Image/1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        
+        
+    
+
+    </style>
+
 </head>
     
 </body>
 <div class="container">
 
 
-    <form class="attendance form">
+    <form class="attendance-form">
         <h2 class="justify-items-center">Register Attendance</h2>
 
-        <div class="row">
-            <div class="col">
-                <label for="firstname" class="form-lable">First Name</label>
-            <input class="form-control" type="text" id="firstname" name="firstname" placeholder="Enter first name">
-        
-            </div>
-            
-
-        <div class="col">
-            <label for="lastname" class="form-lable">Last Name</label>
-            <input class="form-control" type="text" id="lasttname" name="laom   
-            sttname" placeholder="Enter last name ">
-        </div> 
-        </div>
         <div class="row">
                 <div class="col">
                     <label for="date" class="form-lable">Date</label>
@@ -37,21 +53,24 @@
 
             <div class="col">
                 <label for="department" class="form label">Department</label>
-                <input class="form-control" type="text" id="department" name="department" placeholder="department">
+                <select id="department" name="department" class="form-select" >
+                    <option value="">select department</option>
+                    <option value="pdl">PDL</option>
+                    <option value="type setting">Type Setting</option>
+                    <option value="screen printing">Screen Printing</option>
+                    <option value="finishing">Finishing</option>
+                    <option value="mounting">Mounting</option>
+                    <option value="accounting">Accounting</option>
+                    <option value="canteen">Caanteen</option>
+                    <option value="fabric printing">Fabric Printing</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="marketing">Marketing</option>
+                </select>
             </div>
 
         </div>
-            <div class="row">
-                <div class="col">
-                <label for="staus" class="form-label">status</label>
-                <select id="status" name="status"  class="form-select">
-                    <option value="">select status</option>
-                    <option value="permanent">Permanent</option>
-                    <option value="temporal">Temporal</option>
-                    <option value="intern">Intern</option>
-                </select> 
-            </div>
 
+        <div class="row">
     <div class="col">
                 <label for="type" class="form-lable">Type</label>
                 <select id="type" name="type" class="form-select">
@@ -61,8 +80,30 @@
                     
                 </select>
         </div>
+        <div class="col">
+           <label for="start time" class="form-lable">Time</label>
+           <input class="form-control" type="time" id=" start time" name=" start time" placeholder=" start time"> 
+           
         </div>
+       </div>
+
        
+      <div class="row">
+          <div class="col">
+               <label for="Status" class="form-label">Status</label>
+            <select class="form-select" id="Status">
+            <option value="perminent">perminent</option>
+            <option value="Temporal">Temporal</option>
+            <option value="Internt">Internt</option>
+            </select>  </div>
+            <div class="col">
+     <label for="exit time" class="form-lable">Time</label>
+           <input class="form-control" type="time" id=" exit time" name=" exit time" placeholder=" exit time"> 
+        </div>
+
+         
+        </div>
+    </div>
        
         <button type="submit" class="btn">Submit</button>
     </form>
