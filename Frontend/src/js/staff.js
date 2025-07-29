@@ -31,7 +31,21 @@ console.log (userData);
 
 
 function listWorkers(){
-    const request = indexedDB.open ("staffDB")
+    const request = indexedDB.open ("staffDB",1);
+     
+    request.onsuccess = () => {
+         const db = request.result;
+         const transaction = db.transaction(["staff"], "readonly");
+         const staffstore = transaction.objectStore("staff");
+
+         const getAllRequest = staffstore.getAll();
+          
+         getAllRequest.onsuccess = () => {
+            const stafflist = getAllRequest.result;
+            conole.log("Staff List:", staffList);
+        
+         }
+
+  
 }
-
-
+    }
