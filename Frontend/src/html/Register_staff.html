@@ -46,18 +46,18 @@
              <div class="row">
                <div class="col">
                   <label for="first name" class="form-lable">First name:</label>
-                  <input type="text" class="form-control" id="first name" placeholder="Enter first name">
+                  <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
               </div>
                 <div class="col">
                    <label for="last name" class="form-lable">Last name:</label>
-                  <input type="text" class="form-control" id="last name" placeholder="Enter last name">
+                  <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
               </div>
     
              </div>
        <div class="row">
              <div class="col">
                  <label for="date of birth" class="form-label">Date of birth:</label>
-                  <input type="date" class="form-control" id="date of birth" placeholder="Enter date of birth">
+                  <input type="date" class="form-control" id="dob" placeholder="Enter date of birth">
              </div>
               
                 <div class="col">
@@ -96,10 +96,10 @@
       <div class="row">
           <div class="col">
                <label for="Status" class="form-label">Status</label>
-            <select class="form-select" id="Status">
+            <select class="form-select" id="status">
             <option value="perminent">perminent</option>
             <option value="Temporal">Temporal</option>
-            <option value="Internt">Internt</option>
+            <option value="Internt">Intern</option>
             </select>   
         </div>
        <div class="col">
@@ -107,10 +107,12 @@
         </div>
     </div>
     
-    <button class="btn btn-primary" type="submit">submit</button>
+    <input class="btn btn-primary" onclick="collectStaffData()" type="button" value="Value">
     </div>
       </form> 
    </div>
 
  <body>
   <html>
+
+  <script src="../js/staff.js"></script>
