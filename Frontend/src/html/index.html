@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!--Header-->
+    
     <header class="header d-flex justify-content-between align-items-center">
         <div class="d-flex  align-items-center" style="background-color: rgba(35, 35, 109, 0.937); width:100%">
             <img src="../../../image/logo.jpg" alt="logo" style="width: 60px; height:60px">
@@ -21,7 +21,7 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            <!--sidebar-->
+            
              <nav class=" col-md-2 sidebar">
                 <div class="container-fluid" id="main">
 
@@ -32,7 +32,7 @@
                     <button id="workers_list-link">workerslist</button>
                     <button id="attendance-list-link">attendance list</button>
 
-                    <!--page center-->
+                    
 
            
            
@@ -60,8 +60,8 @@
                 const pagecenter = document.getElementById('page-center');
 
                 console.log(pagecenter.innerHTML)
-                //pagecenter.appendChild(content.cloneNode(true));
-                fetch('Register_staff.html')  // adjust path if needed
+                
+                fetch('Register_staff.html') 
                 .then(response => response.text())
                 .then(data => {
                     const pagecenter = document.getElementById('page-center');
@@ -83,8 +83,8 @@
                 const pagecenter = document.getElementById('page-center');
 
                 console.log(pagecenter.innerHTML)
-                //pagecenter.appendChild(content.cloneNode(true));
-                fetch('registerattendance.html')  // adjust path if needed
+                
+                fetch('registerattendance.html')  
                 .then(response => response.text())
                 .then(data => {
                     const pagecenter = document.getElementById('page-center');
@@ -107,8 +107,8 @@
                 const pagecenter = document.getElementById('page-center');
 
                 console.log(pagecenter.innerHTML)
-                //pagecenter.appendChild(content.cloneNode(true));
-                fetch('workers_list.html')  // adjust path if needed
+                
+                fetch('workers_list.html')  
                 .then(response => response.text())
                 .then(data => {
                     const pagecenter = document.getElementById('page-center');
