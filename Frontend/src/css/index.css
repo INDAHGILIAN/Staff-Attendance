@@ -1,85 +1,195 @@
-.sidebar{
-    background-color:orange;
-    height: 90vh;
-    /* padding-right:90px; */
-
-}
-
-#register_staff-link:hover{
-    background-color: rgb(213, 143, 13);
-}
-
-#registerattendance-link:hover{
-    background-color: rgb(213, 143, 13);
+body {
+      display: flex;
+      flex-direction: column;
+      min-height: 98vh;
+    }
     
-}
-
-#workers_list-link:hover{
-     background-color: rgb(213, 143, 13);
-}
-
-#attendance-list-link:hover{
-     background-color: rgb(213, 143, 13);
-}
+    .sidebar-container {
+      width: 250px;
+      background-color: #f8f9fa;
+    }
     
-/* .sidebar a{
-    display: block;
-    margin-bottom: 20px;
-} */
-
- /* .row nav{
-margin-left: 0px;
- } */
-
- .d-flex h1 {
-    margin-left: 40%;
- }
-
-#attendance-list-link{
-   
- width:100%;
-    margin-top: 30px;
-    color: white;
-    background-color: orange;
-    margin: 10px;
-}                  
-
-#register_staff-link{
-   
- width:100%;
-    margin-top: 30px;
-    color: white;
-    background-color: orange;
-    margin: 10px;
-}             
-
-#registerattendance-link{
-   
- width:100%;
-    margin-top: 30px;
-    color: white;
-    background-color: orange;
-    margin: 10px;
-}             
-
-#workers_list-link{
-   
- width:100%;
-    margin-top: 30px;
-    color: white;
-    background-color: orange;
-    margin: 10px;
+    .sidebar {
+      padding: 20px 0;
+    }
     
-}             
+    .sidebar-link {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .sidebar-link:hover {
+      background-color: #e9ecef;
+    }
+    
+    .sidebar-link i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+    
+    .content-container {
+      flex: 1;
+      padding: 20px;
+    }
+    
+    .content-section {
+      display: none;
+      padding: 20px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .footer {
+      background-color: #f8f9fa;
+      padding: 10px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .main-container {
+      display: flex;
+      flex: 1;
+    }
 
-#page-center {
-    /* background-image: url(../../Assets/Image/2.jpeg); */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    height: 10vh;
-    width: 100vw;
-    object-fit: cover; */
+    /* Header Styles */
+.header {
+  background-color: #b4b4b5;
+  display: flex;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #0a0935;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #E4572E;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  background: linear-gradient(to right, #E4572E, #F0A202);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .header-title {
+    font-size: 1.2rem;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 
 
+/* List Attendance style */
+/* Style de base du tableau */
+  .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  /* En-tête du tableau */
+  .table-header {
+    background-color: #6c757d; /* Gris */
+    color: white;
+  }
+  
+  .table-header th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+  
+  /* Cellules du tableau */
+  .attendance-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+  }
+  
+  /* Alternance des couleurs de ligne */
+  .attendance-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Effet de survol */
+  .attendance-table tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Styles des statuts */
+  .status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 70px;
+  }
+  
+  .present {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .late {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .absent {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .early {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+  
+  /* Style responsive */
+  @media (max-width: 768
