@@ -24,3 +24,35 @@ function collectattendanceData(){
  };
 
 }
+
+function attendancelist() {
+    const table = document.getElementById("attendancelist");
+    table.innerHTML = ""; // vide le tableu avant d'ajouter les lignes
+
+    const request = indexedDB.open("staffAtnDb",1);
+    request.onsuccess = function(event){
+        const db = event.target.result;
+        const transaction = db.transaction.(["Attendance"], "readonly");
+        const objectStore = transaction.objectStore("Attendance");
+        const getAllRequest = objectStore.getAll();
+
+        getAllRequest.onsuccess = function(){
+            const AttendanceTable =getAllRequest.result;
+            AttendanceTable.forEach((attendance, index) => {
+                const row = table.insertRow();
+                row.insertCell(0).innertext = index = 1;
+                 row.insertCell(1).innertext = attendance.date;
+                  row.insertCell(1).innertext = attendance.status;
+                   row.insertCell(1).innertext = attendance.department;
+                    
+
+        });
+        console.log("Attendance retrieved successfully");
+        };
+
+        getAllRequest.onerror = function() {
+            console.error("Error retrieving workers:", getAllRequest.error);
+        }
+
+    }
+}

@@ -8,7 +8,7 @@ function collectStaffData(){
     var gender = document.getElementById('gender').value;
 
     var userData = { firstName, lastName, status, department, dob, date, gender };
-console.log (userData);
+ console.log (userData);
 
  // Ajout dans IndexedDB
  const request = indexedDB.open("staffAtncDb", 1);
