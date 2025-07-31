@@ -7,7 +7,7 @@ function collectattendanceData(){
  console.log (userData);
 
  // Ajout dans IndexedDB
- const request = indexedDB.open("attendanceDb", 1);
+ const request = indexedDB.open("staffAtncDb", 1);
  request.onsuccess = function(event) {
      const db = event.target.result;
      const transaction = db.transaction(["attendance"], "readwrite");
@@ -29,10 +29,10 @@ function attendancelist() {
     const table = document.getElementById("attendancelist");
     table.innerHTML = ""; // vide le tableu avant d'ajouter les lignes
 
-    const request = indexedDB.open("staffAtnDb",1);
+    const request = indexedDB.open("staffAtncDb",1);
     request.onsuccess = function(event){
         const db = event.target.result;
-        const transaction = db.transaction.(["Attendance"], "readonly");
+        const transaction = db.transaction(["Attendance"], "readonly");
         const objectStore = transaction.objectStore("Attendance");
         const getAllRequest = objectStore.getAll();
 
@@ -41,9 +41,10 @@ function attendancelist() {
             AttendanceTable.forEach((attendance, index) => {
                 const row = table.insertRow();
                 row.insertCell(0).innertext = index = 1;
-                 row.insertCell(1).innertext = attendance.date;
-                  row.insertCell(1).innertext = attendance.status;
-                   row.insertCell(1).innertext = attendance.department;
+                row.insertCell(1).innertext = attendance.name;
+                 row.insertCell(2).innertext = attendance.date;
+                  row.insertCell(3).innertext = attendance.status;
+                   row.insertCell(4).innertext = attendance.department;
                     
 
         });
