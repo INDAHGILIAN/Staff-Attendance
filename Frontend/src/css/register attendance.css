@@ -13,3 +13,18 @@ body{
 .attendance-form h2{
     margin-left: 40%;
 }
+
+.submit-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 300px
+    }

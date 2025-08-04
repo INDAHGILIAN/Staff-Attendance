@@ -4,10 +4,10 @@ function collectStaffData(){
     var status    = document.getElementById('status').value;
     var department = document.getElementById('department').value;
     var dob = document.getElementById('dob').value;
-    var date = document.getElementById('date').value;
+    var registrationdate = document.getElementById('date').value;
     var gender = document.getElementById('gender').value;
 
-    var userData = { firstName, lastName, status, department, dob, date, gender };
+    var userData = { firstName, lastName, status, department, dob, registrationdate, gender };
 console.log (userData);
 
  // Ajout dans IndexedDB
@@ -31,21 +31,42 @@ console.log (userData);
 
 
 function listWorkers(){
-    const request = indexedDB.open ("staffDB",1);
+    const table = document.getElementById("list-staff");
+    table.innerHTML = "";
+    const request = indexedDB.open ("staffAtncDb", 1);
      
     request.onsuccess = () => {
          const db = request.result;
          const transaction = db.transaction(["staff"], "readonly");
          const staffstore = transaction.objectStore("staff");
-
          const getAllRequest = staffstore.getAll();
-          
          getAllRequest.onsuccess = () => {
             const stafflist = getAllRequest.result;
-            conole.log("Staff List:", staffList);
+            stafflist.forEach((staff, index)=>{
+                const row = table.insertRow();
+                row.insertCell(0).innerText = index +  1;
+                row.insertCell(1).innerText = staff.firstName;
+                row.insertCell(2).innerText = staff.lastName;
+                row.insertCell(3).innerText = staff.department;
+                row.insertCell(4).innerText = staff.status;
+                row.insertCell(5).innerText = staff.date;
+                const actionsCell = row.insertCell();
+                actionsCell.innerHTML = `
+                    <select class="form-select">
+                        <option>Choose...</option>
+                        <option>Add Consumption</option>
+                        <option>Edit</option>
+                        <option>Delete</option>
+                    </select>
+                `;
+            });
+            console.log("Workers retrieved successfully");
         
-         }
+         };
+         getAllRequest.onerror = function() {
+            console.error("Error retrieving workers: ", getAllRequest.error);
+        };
 
   
-}
+};
     }

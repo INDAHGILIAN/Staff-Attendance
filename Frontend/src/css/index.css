@@ -2,11 +2,13 @@ body {
       display: flex;
       flex-direction: column;
       min-height: 98vh;
+      font-family: Arial,sans-serif;
     }
     
     .sidebar-container {
       width: 250px;
-      background-color: #f8f9fa;
+      background-color: #b4b4b5;
+      height: 100vh;
     }
     
     .sidebar {
@@ -16,7 +18,9 @@ body {
     .sidebar-link {
       display: block;
       padding: 10px 20px;
-      color: #333;
+      color: blue;
+      font-size: 18px;
+      font-weight: 500;
       text-decoration: none;
       transition: all 0.3s;
     }
@@ -192,4 +196,12 @@ body {
   }
   
   /* Style responsive */
-  @media (max-width: 768
+  .headST{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .STTt{
+    margin-right: 500px !important;
+  }

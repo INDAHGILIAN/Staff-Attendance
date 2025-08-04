@@ -7,35 +7,32 @@
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/register_staff.css">
   <title>Staff attendance recorder system | Landing Page</title>
-  <link href="../vendor/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../vendor/boostrap.bundle.min.css">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header bg-light py-3">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center">
-        <img src="../../Assets/logo/logo.jpg" height="50px" width="50px" class="rounded-circle me-3" alt="Logo">
-        <h1 class="mb-0">Smart Tracker</h1>
-      </div>
-    </div>
-  </header>
+  
+
+  <div class="headST bg-light py-3 header">
+    <img src="../../Assets/logo.jpg" height="60px" width="90px" class="rounded-circle me-3" alt="Logo">
+       <br>
+        <h1 class="mb-0 STTt" style="color: blue !important;">Smart Tracker</h1>
+  </div>
 
   <!-- Main Content Area -->
   <div class="main-container">
     <!-- Sidebar Navigation -->
     <div class="sidebar-container">
       <nav class="sidebar">
-        <a href="#" onclick="showSection('home-section')" class="sidebar-link">
-          <i class="fas fa-home"></i> Home
-        </a>
+        
         <a href="#" onclick="showSection('register-staff')" class="sidebar-link">
           <i class="fas fa-user-plus"></i> Register Staff
         </a>
         <a href="#" onclick="showSection('register-attendance')" class="sidebar-link">
           <i class="fas fa-users"></i> Register Attendance
         </a>
-        <a href="#" onclick="showSection('worker-list')" class="sidebar-link">
+        <a href="#" onclick="showSection('worker-list'); listWorkers();" class="sidebar-link">
           <i class="fas fa-list"></i> Worker List
         </a>
         <a href="#" onclick="showSection('attendance-list')" class="sidebar-link">
@@ -44,44 +41,48 @@
       </nav>
     </div>
 
-    <!-- Content Sections -->
-    <div class="content-container">
-      <!-- Home Section -->
-      <div id="home-section" class="content-section">
-        <h2 class="text-center" style="color: #E4572E;">Welcome to Smart Tracker</h2>
-        <!-- Add home content here -->
-      </div>
+
 
       <!-- Register Staff Section -->
-      <div id="register-staff" class="content-section">
-        <h3 class="text-center" style="color: #E4572E;">Register Staff</h3>
+      <div id="register-staff" class="content-section regStaff">
+        <h3 class="text-center werey" style="color:  blue; align-items: center !important;">Register Staff</h3>
         <!-- Add register staff form here -->
-        <form id="workerForm" class="worker-form">
-          <!-- Ligne 1: Name + Giving Name -->
+         <form id="workerForm" class="worker-form">
+          <!-- Ligne 1: Name + last Name -->
           <div class="form-row">
             <div class="form-group" >
-              <label for="name" class="form-label">Name*</label>
-              <input type="text" id="name" class="form-control" placeholder="Enter full name" required>
+              <label for="firstName" class="form-label">FirstName
+              <input type="text" id="firstName" class="form-control" placeholder="Enter first name" required>
+            </label>
             </div>
             <div class="form-group">
-              <label for="givingName" class="form-label">Giving Name*</label>
-              <input type="text" id="givingName" class="form-control" placeholder="Enter giving name" required>
+              <label for="lastName" class="form-label">LastName
+              <input type="text" id="lastName" class="form-control" placeholder="Enter last name" required>
+            </label>
             </div>
           </div>
 
           <!-- Ligne 2: Department + Status -->
           <div class="form-row">
             <div class="form-group" >
-              <label for="departement" class="form-label">Department*</label>
-              <select id="departement" class="form-select" required>
+              <label for="department" class="form-label">Department
+              <select id="department" class="form-select" required>
                 <option value="">Select department...</option>
-                <option value="HR">Human Resources</option>
-                <option value="IT">Information Technology</option>
-                <option value="Finance">Finance</option>
+                <option value="PDL">PDL</option>
+                <option value="Typesetting">Typesetting</option>
+                <option value="Screen Printin">Screen Printing</option>
+                <option value="Finishing">Finishing</option>
+                <option value="Mounting">Mounting</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Canteen">Canteen</option>
+                <option value="Fabric Printing">Fabric Printing</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Marketing">Marketing</option>
+ 
               </select>
             </div>
             <div class="form-group">
-              <label for="status" class="form-label">Status*</label>
+              <label for="status" class="form-label">Status
               <select id="status" class="form-select" required>
                 <option value="">Select status...</option>
                 <option value="Permanent">Permanent</option>
@@ -94,25 +95,27 @@
           <!-- Ligne 3: Date of Birth + Place of Birth -->
           <div class="form-row">
             <div class="form-group" >
-              <label for="dob" class="form-label">Date Of Birth*</label>
+              <label for="dob" class="form-label">Date Of Birth
               <input type="date" id="dob" class="form-control" required>
+            </label>
             </div>
             <div class="form-group">
-              <label for="gender" class="form-label">Gender*</label>
+              <label for="gender" class="form-label">Gender
               <select id="gender" class="form-select" required>
                 <option value="">Select gender...</option>
-                <option value="Permanent">Male</option>
-                <option value="Temporal">Female</option>
-                <option value="Intern">Other</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
               </select>
             </div>
           </div>
 
           <!-- Ligne 4: Registration Date -->
           <div class="form-row">
+            
             <div class="form-group" >
-              <label for="rgdate" class="form-label">Registration date</label>
-              <input type="date" id="rgdate" class="form-control" readonly>
+              <label for="registrationDate" class="form-label">Registration date
+              <input type="date" id="rgdate" class="form-control" required>
+            </label>
             </div>
             <div class="form-group">
               <!-- Espace vide pour maintenir l'alignement -->
@@ -121,66 +124,88 @@
 
           <!-- Bouton Submit -->
           <div class="form-actions">
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-user-plus"></i> Submit
+            <input type="button" class="submit-btn" value="Submit" onclick=" collectStaffData();">
+              <i class="fas fa-user-plus"></i> 
             </button>
           </div>
         </form>
       </div>
 
       <!-- Register Attendance Section -->
-      <div id="register-attendance" class="content-section">
-        <h4 class="text-center" style="color: #E4572E;">Register Attendance</h4>
+      <div id="register-attendance" class="content-section regAttend">
+        <h4 class="text-center werey" style="color: blue;">Register Attendance</h4>
         <!-- Add attendance form here -->
-        <form action="">
+        <form action="" style="margin-left: 200px !important; width: 90% !important;">
           <div class="row mb-3">
             <div class="col">
-              <label for="departement-consumption" class="form-label"> Choose Department</label>
-              <select id="departement-consumption" class="form-select">
-              </select>
+              <label for="Choosedepartment" class="form-label">ChooseDepartment
+              <select id="Choosedepartment" class="form-select">
+                <option value="PDL">PDL</option>
+                <option value="Typesetting">Typesetting</option>
+                <option value="Screen Printin">Screen Printing</option>
+                <option value="Finishing">Finishing</option>
+                <option value="Mounting">Mounting</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Canteen">Canteen</option>
+                <option value="Fabric Printing">Fabric Printing</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Marketing">Marketing</option>
+ 
+              </label>
+            </select>
             </div>
             <div class="col">
-              <label for="giving-name" class="form-label">Choose Satff</label>
-              <select onchange="listWorkersByDepartement()" id="worker" class="form-select">
-              </select>
+              <label for="giving-name" class="form-label">ChooseStaff
+              <select onchange="listWorkersByDepartment()" id="worker" class="form-select">
+                <option value="choosestaff">choosestaff</option>
+              </label>
+            </select>
             </div>
           </div>
+
           <div class="row mb-3">
             <div class="col">
-              <label for="consumption-type" class="form-label">Attendance type</label>
-              <select id="consumption-type" class="form-select">
-                <option value="0">Select...</option>
+              <label for="attendancetype" class="form-label">Attendancetype
+              <select id="attendancetype" class="form-select">
+                </label>
+                  <option>
                 <option value="Exit">Exit</option>
                 <option value="Entry">Entry</option>
               </select>
             </div>
             <div class="col">
-              <label for="date" class="form-label">Date</label>
+              <label for="date" class="form-label">Date
               <input type="date" id="date" class="form-control" placeholder="Number of extra">
+            </label>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col">
-              <label for="exTime" class="form-label">Exit Time</label>
+              <label for="exTime" class="form-label">ExitTime
               <input type="time" id="exTime" class="form-control" placeholder="Date Of Birth">
+            </label>
             </div>
             <div class="col">
-              <label for="emTime" class="form-label">Entry Time</label>
-              <input type="time" id="enTime" class="form-control" placeholder="Amount consumed :XAF"
-                readonly>
+              <label for="enTime" class="form-label">EntryTime
+              <input type="time" id="enTime" class="form-control" placeholder="Date of Birth" >
+            </label>
             </div>
           </div>
           <!-- Ajoute d'autres champs ou boutons ici -->
           <div class="btn-gradient">
-            <input type="button" onclick="saveConsumption()" class="btn w-50"
-              style="background-color: #E4572E; margin-top: 40px; margin-left: 200px;" value="Submit">
+            <div class="form-actions">
+              <input type="button" class="submit-btn" value="submit" onclick=" collectattendanceData();">
+                <i class="fas fa-user-plus"></i>
+              </button>
+            </div>
+          </form>
           </div>
         </form>
       </div>
 
       <!-- Worker List Section -->
       <div id="worker-list" class="content-section">
-        <h4 class="text-center" style="color: #E4572E;">Worker List</h4>
+        <h4 class="text-center werey" style="color: blue;">Worker List</h4>
         <!-- Add worker list table here -->
         <table class="worker-data-table">
           <thead>
@@ -188,168 +213,37 @@
               <th>Num</th>
               <th>Name</th>
               <th>Surname</th>
-              <th>Departement</th>
+              <th>Department</th>
               <th>Status</th>
               <th>Registration Date</th>
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody id="workerLists">
-            <tr>
-              <td>1</td>
-              <td>John</td>
-              <td>Doe</td>
-              <td>IT</td>
-              <td><span class="status-badge permanent">Permanent</span></td>
-              <td>10/01/2020</td>
-              <td>
-                <select>
-                  <option value="">Add Attendance</option>
-                  <option value="">Edit Staff</option>
-                  <option value="">Remove Staff</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jane</td>
-              <td>Smith</td>
-              <td>HR</td>
-              <td><span class="status-badge permanent">Permanent</span></td>
-              <td>15/03/2019</td>
-              <td>
-                <select>
-                  <option value="">Add Attendance</option>
-                  <option value="">Edit Staff</option>
-                  <option value="">Remove Staff</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Robert</td>
-              <td>Johnson</td>
-              <td>Finance</td>
-              <td><span class="status-badge temporal">Temporal</span></td>
-              <td>05/06/2021</td>
-              <td>
-                <select>
-                  <option value="">Add Attendance</option>
-                  <option value="">Edit Staff</option>
-                  <option value="">Remove Staff</option>
-                </select>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Emily</td>
-              <td>Williams</td>
-              <td>Marketing</td>
-              <td><span class="status-badge intern">Intern</span></td>
-              <td>20/02/2022</td>
-              <td>
-                <select>
-                  <option value="">Add Attendance</option>
-                  <option value="">Edit Staff</option>
-                  <option value="">Remove Staff</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Michael</td>
-              <td>Brown</td>
-              <td>Operations</td>
-              <td><span class="status-badge permanent">Permanent</span></td>
-              <td>12/11/2018</td>
-              <td>
-                <select>
-                  <option value="">Add Attendance</option>
-                  <option value="">Edit Staff</option>
-                  <option value="">Remove Staff</option>
-                </select>
-              </td>
-            </tr>
+          <tbody id="list-staff">
+            
           </tbody>
         </table>
       </div>
 
       <!-- Attendance List Section -->
       <div id="attendance-list" class="content-section">
-        <h4 class="text-center" style="color: #E4572E;">Attendance List</h4>
+        <h4 class="text-center werey" style="color: blue;">Attendance List</h4>
         <!-- Add attendance list table here -->
         <table class="attendance-table">
           <thead>
             <tr class="table-header">
               <th>Num</th>
-              <th>Name</th>
-              <th>Surname</th>
-              <th>Departement</th>
+              <th>name</th>
+              <th>Department</th>
               <th>Status</th>
               <th>Exit Time</th>
               <th>Entry Time</th>
               <th>Date</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="list-attendance">
             <!-- Enregistrement 1 -->
-            <tr>
-              <td>1</td>
-              <td>John</td>
-              <td>Doe</td>
-              <td>IT</td>
-              <td><span class="status present">Present</span></td>
-              <td>17:30</td>
-              <td>08:45</td>
-              <td>15/07/2023</td>
-            </tr>
-
-            <!-- Enregistrement 2 -->
-            <tr>
-              <td>2</td>
-              <td>Sarah</td>
-              <td>Johnson</td>
-              <td>HR</td>
-              <td><span class="status late">Late</span></td>
-              <td>17:15</td>
-              <td>09:30</td>
-              <td>15/07/2023</td>
-            </tr>
-
-            <!-- Enregistrement 3 -->
-            <tr>
-              <td>3</td>
-              <td>Michael</td>
-              <td>Williams</td>
-              <td>Finance</td>
-              <td><span class="status absent">Absent</span></td>
-              <td>-</td>
-              <td>-</td>
-              <td>15/07/2023</td>
-            </tr>
-
-            <!-- Enregistrement 4 -->
-            <tr>
-              <td>4</td>
-              <td>Emily</td>
-              <td>Brown</td>
-              <td>Marketing</td>
-              <td><span class="status present">Present</span></td>
-              <td>16:45</td>
-              <td>08:30</td>
-              <td>15/07/2023</td>
-            </tr>
-
-            <!-- Enregistrement 5 -->
-            <tr>
-              <td>5</td>
-              <td>David</td>
-              <td>Miller</td>
-              <td>Operations</td>
-              <td><span class="status early">Early Exit</span></td>
-              <td>15:00</td>
-              <td>08:15</td>
-              <td>15/07/2023</td>
-            </tr>
+            
           </tbody>
         </table>
       </div>
@@ -369,3 +263,6 @@
 </html>
 
 <script src="../js/index.js"></script>
+<script src="./../js/staff.js"></script>
+<script src="../js/attendance.js"></script>
+<script src="../js/db.js"></script>
