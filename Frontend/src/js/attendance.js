@@ -49,7 +49,7 @@ function listAttendance(){
                 row.insertCell(2).innerText = attendance.Name;
                 row.insertCell(3).innerText = attendance.Department;
                 row.insertCell(4).innerText = attendance.Status;
-                row.insertCell(5).innerText = attendance.ExitTime;
+                row.insertCell(5).innerText = attendance.EixtTime;
                 row.insertCell(6).innerText = attendance.EntryTime;
                 row.insertCell(7).innerText = attendance.Date;
                
