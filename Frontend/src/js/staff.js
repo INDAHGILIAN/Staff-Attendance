@@ -4,7 +4,7 @@ function collectStaffData(){
     var status    = document.getElementById('status').value;
     var department = document.getElementById('department').value;
     var dob = document.getElementById('dob').value;
-    var registrationdate = document.getElementById('date').value;
+    var registrationdate = document.getElementById('rgdate').value;
     var gender = document.getElementById('gender').value;
 
     var userData = { firstName, lastName, status, department, dob, registrationdate, gender };
@@ -18,9 +18,7 @@ console.log (userData);
      const objectStore = transaction.objectStore("staff");
      const addRequest = objectStore.add(userData);
 
-     addRequest.onsuccess = function() {
-         console.log("staff added successfully");
-     };
+     
 
      addRequest.onerror = function() {
          console.error("Error adding staff: ", addRequest.error);
@@ -49,12 +47,12 @@ function listWorkers(){
                 row.insertCell(2).innerText = staff.lastName;
                 row.insertCell(3).innerText = staff.department;
                 row.insertCell(4).innerText = staff.status;
-                row.insertCell(5).innerText = staff.date;
+                row.insertCell(5).innerText = staff.registrationdate;
                 const actionsCell = row.insertCell();
                 actionsCell.innerHTML = `
                     <select class="form-select">
                         <option>Choose...</option>
-                        <option>Add Consumption</option>
+                        <option>Add Attendance</option>
                         <option>Edit</option>
                         <option>Delete</option>
                     </select>

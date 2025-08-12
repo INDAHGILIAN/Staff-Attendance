@@ -21,13 +21,14 @@ request.onupgradeneeded = function(event) {
     // Crée la table "register" si elle n'existe pas   
     if (!db.objectStoreNames.contains("attendance")) {
         var objectStore = db.createObjectStore("attendance", { keyPath: "id", autoIncrement: true });
-        objectStore.createIndex("department", "departmen", { unique: false });
-        objectStore.createIndex("worker", "worker", { unique: false });
-        objectStore.createIndex("attendancetype", "attendancetypes", { unique: false });
+         objectStore.createIndex("name", "name", { unique: false });
+          objectStore.createIndex("surname", "surname", { unique: false });
+        objectStore.createIndex("department", "department", { unique: false });
+        objectStore.createIndex("attendancetype", "attendancetype", { unique: false });
         objectStore.createIndex("date", "date", { unique: false });
-        objectStore.createIndex("enTime", "enTime", { unique: false });
-        objectStore.createIndex("exTime", "exTime", { unique: false });
-        console.log("Object store 'register' created successfully");
+        objectStore.createIndex("entryTime", "entryTime", { unique: false });
+        objectStore.createIndex("exitTime", "exitTime", { unique: false });
+        console.log("Object store 'attendance' created successfully");
     }
 
     if (!db.objectStoreNames.contains("department")) {

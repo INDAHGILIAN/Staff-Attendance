@@ -1,12 +1,12 @@
-function collectattendanceData(){
-    var department = document.getElementById('department').value;
-    var worker = document.getElementById('worker').value;
-    var attendancetype = document.getElementById('attendancetype').value;
-    var date = document.getElementById('date').value;
-    var exTime = document.getElementById('exTime').value;
-    var enTime = document.getElementById('enTime').value;
+function collectAttendanceData(){
+    var firstName = document.getElementById("worker").value;
+     var department = document.getElementById("Choose department").value;
+     var attendanceType = document.getElementById("attendance type").value;
+     var EntryTime = document.getElementById("Entry Time").value;
+    var ExitTime = document.getElementById("Exit Time").value;
+      var date = document.getElementById("date").value;
 
-    var userData = { department, worker, attendancetype, date, exTime, enTime };
+    var userData = { firstName, department, attendanceType, EntryTime, ExitTime, date };
     console.log(userData);
 
     // Add to IndexedDB
@@ -30,6 +30,7 @@ function collectattendanceData(){
 
 
 
+
 function listAttendance(){
     const table = document.getElementById("list-attendance");
     table.innerHTML = "";
@@ -41,22 +42,20 @@ function listAttendance(){
          const attendancestore = transaction.objectStore("attendance");
          const getAllRequest = attendancestore.getAll();
          getAllRequest.onsuccess = () => {
-            const stafflist = getAllRequest.result;
-            stafflist.forEach((attendance, index)=>{
+            const attendancelist = getAllRequest.result;
+            attendancelist.forEach((attendance, index)=>{
                 const row = table.insertRow();
                 row.insertCell(0).innerText = index +  1;
-                row.insertCell(1).innerText = attendance.Num;
-                row.insertCell(2).innerText = attendance.Name;
-                row.insertCell(3).innerText = attendance.Department;
-                row.insertCell(4).innerText = attendance.Status;
-                row.insertCell(5).innerText = attendance.EixtTime;
-                row.insertCell(6).innerText = attendance.EntryTime;
-                row.insertCell(7).innerText = attendance.Date;
-               
-            });
+                 row.insertCell(1).innerText = attendance.firstName;
+                row.insertCell(2).innerText = attendance.department;
+                row.insertCell(3).innerText = attendance.attendanceType; 
+                row.insertCell(4).innerText = attendance.entryTime;
+                row.insertCell(5).innerText = attendance.exitTime;
+                row.insertCell(6).innerText = attendance.date;
+                
             console.log("attendance retrieved successfully");
         
-         };
+         });
          getAllRequest.onerror = function() {
             console.error("Error retrieving attendance: ", getAllRequest.error);
         };
@@ -64,3 +63,4 @@ function listAttendance(){
   
 };
     }
+}
