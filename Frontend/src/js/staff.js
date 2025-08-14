@@ -9,7 +9,7 @@ function collectStaffData(){
 
     var userData = { firstName, lastName, status, department, dob, registrationdate, gender };
 console.log (userData);
-alert("register staff")
+alert("register staff");
 
  // Ajout dans IndexedDB
  const request = indexedDB.open("staffAtncDb", 1);
