@@ -22,7 +22,7 @@ request.onupgradeneeded = function(event) {
     if (!db.objectStoreNames.contains("attendance")) {
         var objectStore = db.createObjectStore("attendance", { keyPath: "id", autoIncrement: true });
          objectStore.createIndex("name", "name", { unique: false });
-          objectStore.createIndex("surname", "surname", { unique: false });
+       objectStore.createIndex("surname", "surname", { unique: false });
         objectStore.createIndex("department", "department", { unique: false });
         objectStore.createIndex("attendancetype", "attendancetype", { unique: false });
         objectStore.createIndex("date", "date", { unique: false });

@@ -1,12 +1,12 @@
 function collectAttendanceData(){
-    var firstName = document.getElementById("worker").value;
-     var department = document.getElementById("Choose department").value;
-     var attendanceType = document.getElementById("attendance type").value;
-     var EntryTime = document.getElementById("Entry Time").value;
-    var ExitTime = document.getElementById("Exit Time").value;
+    var name = document.getElementById("worker").value;
+     var department = document.getElementById("department").value;
+     var attendancetype = document.getElementById("attendanceType").value;
+     var entryTime = document.getElementById("entryTime").value;
+    var exitTime = document.getElementById("exitTime").value;
       var date = document.getElementById("date").value;
 
-    var userData = { firstName, department, attendanceType, EntryTime, ExitTime, date };
+    var userData = {  name, department, attendancetype, entryTime, exitTime, date };
     console.log(userData);
 
     // Add to IndexedDB
@@ -46,9 +46,9 @@ function listAttendance(){
             attendancelist.forEach((attendance, index)=>{
                 const row = table.insertRow();
                 row.insertCell(0).innerText = index +  1;
-                 row.insertCell(1).innerText = attendance.firstName;
+                 row.insertCell(1).innerText = attendance.name;
                 row.insertCell(2).innerText = attendance.department;
-                row.insertCell(3).innerText = attendance.attendanceType; 
+                row.insertCell(3).innerText = attendance.attendancetype; 
                 row.insertCell(4).innerText = attendance.entryTime;
                 row.insertCell(5).innerText = attendance.exitTime;
                 row.insertCell(6).innerText = attendance.date;

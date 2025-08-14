@@ -1,5 +1,6 @@
  document.addEventListener('DOMContentLoaded', function() {
       showSection('home-section');
+      listDepartments();
     });
 
     function showSection(sectionId) {

@@ -2,7 +2,7 @@ function collectStaffData(){
     var firstName = document.getElementById('firstName').value;
     var lastName  = document.getElementById('lastName').value;
     var status    = document.getElementById('status').value;
-    var department = document.getElementById('department').value;
+    var department = document.getElementById('department-register').value;
     var dob = document.getElementById('dob').value;
     var registrationdate = document.getElementById('rgdate').value;
     var gender = document.getElementById('gender').value;
@@ -18,7 +18,7 @@ console.log (userData);
      const objectStore = transaction.objectStore("staff");
      const addRequest = objectStore.add(userData);
 
-     
+
 
      addRequest.onerror = function() {
          console.error("Error adding staff: ", addRequest.error);

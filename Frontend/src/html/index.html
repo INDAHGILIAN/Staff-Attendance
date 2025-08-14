@@ -65,20 +65,8 @@
           <!-- Ligne 2: Department + Status -->
           <div class="form-row">
             <div class="form-group" >
-              <label for="department" class="form-label">Department
-              <select id="department" class="form-select" required>
-                <option value="">Select department...</option>
-                <option value="PDL">PDL</option>
-                <option value="Typesetting">Typesetting</option>
-                <option value="Screen Printin">Screen Printing</option>
-                <option value="Finishing">Finishing</option>
-                <option value="Mounting">Mounting</option>
-                <option value="Accounting">Accounting</option>
-                <option value="Canteen">Canteen</option>
-                <option value="Fabric Printing">Fabric Printing</option>
-                <option value="Maintenance">Maintenance</option>
-                <option value="Marketing">Marketing</option>
- 
+              <label for="department" class="form-label">Department</label>
+              <select  id="department-register" class="form-select" required>
               </select>
             </div>
             <div class="form-group">
@@ -138,37 +126,23 @@
         <form action="" style="margin-left: 200px !important; width: 90% !important;">
           <div class="row mb-3">
             <div class="col">
-              <label for="Choose department" class="form-label">Choose Department
-              <select id="Choose department" class="form-select">
-                <option value="PDL">PDL</option>
-                <option value="Typesetting">Typesetting</option>
-                <option value="Screen Printin">Screen Printing</option>
-                <option value="Finishing">Finishing</option>
-                <option value="Mounting">Mounting</option>
-                <option value="Accounting">Accounting</option>
-                <option value="Canteen">Canteen</option>
-                <option value="Fabric Printing">Fabric Printing</option>
-                <option value="Maintenance">Maintenance</option>
-                <option value="Marketing">Marketing</option>
- 
-              </label>
+              <label for="department" class="form-label">Choose Department</label>
+              <select onchange="listWorkersByDepartment()" id="department" class="form-select" >
             </select>
             </div>
             <div class="col">
               <label for="giving-name" class="form-label">Choose Staff
-              <select onchange="listWorkersByDepartment()" id="worker" class="form-select">
-                <option >Choose....</option>
+              <select  id="worker" class="form-select">
               </label>
             </select>
+            
             </div>
           </div>
 
           <div class="row mb-3">
             <div class="col">
-              <label for="attendance type" class="form-label">Attendance type
-              <select id="attendance type" class="form-select">
-                </label>
-                  <option>
+              <label for="attendance type" class="form-label">Attendance type</label>
+              <select id="attendanceType" class="form-control">
                 <option value="Entry">Entry</option>
                 <option value="Exit">Exit</option>
               </select>
@@ -182,12 +156,12 @@
           <div class="row mb-3">
             <div class="col">
               <label for="Entry Time" class="form-label">Entry Time
-              <input type="time" id="entry tTime" class="form-control" placeholder="Entry Time">
+              <input type="time" id="entryTime" class="form-control" placeholder="Entry Time">
             </label>
             </div>
             <div class="col">
               <label for="Exit Time" class="form-label">Exit Time
-              <input type="time" id="exit Time" class="form-control" placeholder="Exit Time" >
+              <input type="time" id="exitTime" class="form-control" placeholder="Exit Time" >
             </label>
             </div>
           </div>
@@ -266,3 +240,4 @@
 <script src="./../js/staff.js"></script>
 <script src="../js/attendance.js"></script>
 <script src="../js/db.js"></script>
+<script src="../js/department.js"></script>
