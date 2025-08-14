@@ -80,7 +80,7 @@ function listWorkersByDepartment() {
                 staffSelect.innerHTML = '<option value="">Choose staff...</option>';
                 filteredWorkers.forEach(staff => {
                     const option = document.createElement("option");
-                    option.value =  staff.lastName + " " +staff.firstName; 
+                    option.value =  staff.lastName + " " + staff.firstName; 
                     option.textContent = staff.lastName +" " + staff.firstName;
                     staffSelect.appendChild(option);
                 

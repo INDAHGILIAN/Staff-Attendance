@@ -8,7 +8,8 @@ function collectAttendanceData(){
 
     var userData = {  name, department, attendancetype, entryTime, exitTime, date };
     console.log(userData);
-
+    alert("register attendance");
+    
     // Add to IndexedDB
     const request = indexedDB.open("staffAtncDb", 1);
     request.onsuccess = function(event) {
